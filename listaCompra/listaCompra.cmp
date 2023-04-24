@@ -1,10 +1,12 @@
 <aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="pageReference" type="Object"/>
+    <lightning:navigation aura:id="navService"/>
     <lightning:recordEditForm aura:id="recordEditForm"
                            objectApiName="Compra_Escritorio__c"
                            onsuccess="{!c.confirma}">
         <lightning:messages />
         
-        <lightning:card title="Lista Compras para o escritório">
+        <lightning:card iconName="standard:user" title="Lista Compras para o escritório">
         	<div class="slds-grid">
             	<div class="slds-col slds-p-horizontal_medium">
             		<lightning:inputField fieldName="Name" aura:id="field"/>
